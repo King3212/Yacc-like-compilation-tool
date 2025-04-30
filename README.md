@@ -41,3 +41,7 @@
 ## 测试
 
 参考[测试数据及结果.md](test/测试数据及结果.md)
+
+## 原github仓库
+
+[Compiler-theory](https://github.com/King3212/Compiler-theory)
