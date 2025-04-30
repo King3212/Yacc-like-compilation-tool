@@ -1,0 +1,23 @@
+>> 为了词法分析程序的正常工作，若存在注释的开闭符号需要必须声明：
+>> _open_comment = 
+>> _close_comment = 
+>> _oneLine_comment_open =
+
+_open_comment = \/\*
+_close_comment = \*\/
+_oneLine_comment_open = \/\/
+
+keywords 1000 = if else while do return void int float double
+signs 50 = \+ - \* \/ \% \^ <= < >= > == != = ; , \( \) \[ \] \{ \}
+
+>> letter定义为:[a-zA-Z]
+>> digit 定义为：[0-9]
+
+
+id 10 = (_|letter)(_|letter|digit)*
+num 15 = digit+(\.digit+)?
+
+
+
+>> ">>"符号表示注释
+

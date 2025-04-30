@@ -1,0 +1,37 @@
+== token ==
+1000 if else while do return void int float double
+50 + - * / % ^ <= < >= > == != = ; , ( ) [ ] { }
+10 id 
+15 num
+
+== grammar ==
+program -> definition-list
+definition-list -> definition-list definition | definition
+definition -> variable-definition | function-definition
+variable-definition -> type-indicator id ; | type-indicator id [ num ] ;
+type-indicator -> int | float | double | void
+function-definition -> type-indicator id ( parameters ) compound-stmt
+parameters -> parameter-list | void
+parameter-list -> parameter-list , parameter | parameter
+parameter -> type-indicator id | type-indicator id [ ]
+compound-stmt -> { local-definitions statement-list }
+local-definitions -> local-definitions variable-definition | @
+statement-list -> statement-list statement | @
+statement -> expression-stmt | compound-stmt | condition-stmt | while-stmt | dowhile-stmt | return-stmt
+expression-stmt -> expression ; | ;
+condition-stmt -> if ( expression ) statement | if ( expression ) statement else statement
+while-stmt -> while ( expression ) statement
+dowhile-stmt -> do statement while ( expression ) ;
+return-stmt -> return ; | return expression ;
+expression -> variable = expression | simple-expression
+variable -> id | id [ expression ]
+simple-expression -> additive-expression relop additive-expression | additive-expression
+relop -> <= | < | > | >= | == | !=
+additive-expression -> additive-expression addop term | term
+addop -> + | -
+term -> term mulop factor | factor
+mulop -> * | / | % | ^
+factor -> ( expression ) | variable | call | num
+call -> id ( arguments )
+arguments -> argument-list | @
+argument-list -> argument-list , expression | expression
