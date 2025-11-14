@@ -1,6 +1,6 @@
-# Compiler-theory 课程作业
+# Compiler-theory 课程项目
 
-## 任务一 词法分析器生成器（类Lex）
+## 一、 词法分析器生成器（类Lex）
 
 ### 要求
 
@@ -18,7 +18,7 @@
 5. 将DFA编码为程序，提高运行效率
    > (genWordAnalyzer/)
 
-## 任务二 语法分析器生成器（类Yacc）
+## 二、 语法分析器生成器（类Yacc）
 
 ### 要求
 
@@ -45,3 +45,4 @@
 ## 原github仓库
 
 [Compiler-theory](https://github.com/King3212/Compiler-theory)
+
